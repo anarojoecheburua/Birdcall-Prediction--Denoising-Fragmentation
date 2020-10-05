@@ -36,3 +36,11 @@ that transforms bird audio files into shorter audio files containing the charact
 
 The final algorithm applies the fragmentation to the de-noised data, i.e, I am considering:<br/>
 *f|D2 : D2 ⟶ F, audioDenoised ↦ audioFragmented*
+
+## Full description of the problem and datasets
+
+## Requirements.txt
+
+This contains the library dependencies for the python code.  You will need to install these with
+# `pip install -r requirements.txt` 
+before you can run this.
