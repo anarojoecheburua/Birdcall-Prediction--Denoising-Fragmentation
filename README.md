@@ -9,7 +9,7 @@ In order to make the classification of the data easier using deep learning model
 The de-noising algorithm has two parts:
 
 * Noise-reduce function: let A be the space of bird audio files and D1 the space of partially de- noised audio files. This first step transforms the original audio files into partially de-noised audio files, maintaining their length.<br />
-*nr: A ⟶ D1, audioOriginal ↦ nr(audioOriginal) = audioPartiallyDenoised*
+*nr: A ⟶ D1, audioOriginal ↦ nr(audioOriginal) = audioPartiallyDenoised*<br />
 * Band pass-filter: let D2 be the space of de-noised audio files. The second step transforms the
 partially de-noised audio files into de-noised audio files, maintaining their length.
 *bf : D1 ⟶ D2, audioPartially Denoised ↦ nr(audioPartiallyDenoised) = audioDenoised* <br />
@@ -17,15 +17,18 @@ partially de-noised audio files into de-noised audio files, maintaining their le
 The de-noising algorithm can be understood as the composition of the above functions:<br />
 *d = bf ∘ nr : A ⟶ D2, audioOriginal ↦ audioDenoised*<br />
 
-Noise reduce is an already existing package to reduce noise for a general audio file. However, the inputs for the main function are a sample of background noise and the audio file itself.
-Therefore, one cannot apply this method directly for this problem as just the audio file is provided.
-Is it possible to adapt our audio files in order to take advantage of the noise-reduce package?
-Idea: to create a new audio file from the existing audio file containing just background noise.
+Noise reduce is an already existing package to reduce noise for a general audio file. However, the inputs for the main function are a sample of background noise and the audio file itself. Therefore, one cannot apply this method directly for this problem as just the audio file is provided.<br />
+
+Is it possible to adapt our audio files in order to take advantage of the noise-reduce package?<br />
+**Idea**: to create a new audio file from the existing audio file containing just background noise.<br />
 This was achieved by an optimisation algorithm that finds an optimum threshold depending on the type of audio separating those parts of the audio file that just contain noise from the ones that contain noise + bird call.
 
 ## Fragmentation algorithm
 Fragmentation allows us to predict bird species and the times where they occur in the test data. By reducing size and removing non-bird call parts, fragmentation should also help with training speed/efficiency and/or performance. <br/>
+
 This is my transformation approach to fragmentation; to fragment the audio files and to create new audio files coming from this fragmentation in order to reduce them in size but keeping the same valuable information.<br/>
+
 Let F be the space of fragmented data. Our fragmentation can be understood as the function *f : A ⟶ F, audioOriginal ↦ audioFragmented* that transforms bird audio files into shorter audio files containing the characteristic bird calls for each audio files.<br/>
-The final algorithm applies the fragmentation to the de-noised data, i.e, I am considering:
+
+The final algorithm applies the fragmentation to the de-noised data, i.e, I am considering:.<br/>
 *f|D2 : D2 ⟶ F, audioDenoised ↦ audioFragmented*
