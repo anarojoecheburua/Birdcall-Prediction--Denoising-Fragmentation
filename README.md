@@ -1,5 +1,5 @@
 # Birdcall-Prediction--Denoising-Fragmentation
-**De-noising and fragmentation preprocessing algorithms for birdcall identification 🐦 More info on the Kaggle competition and datasets can be found <a href="https://www.kaggle.com/c/birdsong-recognition">here.</a><br />
+**De-noising and fragmentation preprocessing algorithms for birdcall identification 🐦 More info on the Kaggle competition and datasets can be found <a href="https://www.kaggle.com/c/birdsong-recognition">here.</a><br />**
 
 Here I develop a preprocessing algorithm of birdcalls sound data which automatically transforms records in order to remove regions of non-interest. These regions corresponds to the part of the audio files where the bird is not singing. <br />
 
