@@ -3,7 +3,7 @@
 
 Here I develop a preprocessing algorithm of birdcalls sound data which automatically transforms records in order to remove regions of non-interest. These regions corresponds to the part of the audio files where the bird is not singing. <br />
 
-In order to make the classification of the data easier using deep learning models, the algorithm first removes background noise - de-noising algorithm. This helps the different datasets to become more distinct, as background noise is not relevant to the classification..<br/>
+In order to make the classification of the data easier using deep learning models, the algorithm first removes background noise - de-noising algorithm. This helps the different datasets to become more distinct, as background noise is not relevant to the classification.<br/>
 
 Finally, the algorithm ignores the regions of non-interest and converts the audio file into a shorter one containing just birdcalls - fragmentation algorithm. <br />
 
