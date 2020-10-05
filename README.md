@@ -30,7 +30,9 @@ Fragmentation allows us to predict bird species and the times where they occur i
 
 This is my transformation approach to fragmentation; to fragment the audio files and to create new audio files coming from this fragmentation in order to reduce them in size but keeping the same valuable information.<br/>
 
-Let F be the space of fragmented data. Our fragmentation can be understood as the function *f : A ⟶ F, audioOriginal ↦ audioFragmented* that transforms bird audio files into shorter audio files containing the characteristic bird calls for each audio files.<br/>
+Let F be the space of fragmented data. Our fragmentation can be understood as the function <br/> 
+*f : A ⟶ F, audioOriginal ↦ audioFragmented*.<br/>
+that transforms bird audio files into shorter audio files containing the characteristic bird calls for each audio files.<br/>
 
-The final algorithm applies the fragmentation to the de-noised data, i.e, I am considering:.<br/>
+The final algorithm applies the fragmentation to the de-noised data, i.e, I am considering:<br/>
 *f|D2 : D2 ⟶ F, audioDenoised ↦ audioFragmented*
