@@ -11,7 +11,7 @@ The de-noising algorithm has two parts:
 * Noise-reduce function: let A be the space of bird audio files and D1 the space of partially de- noised audio files. This first step transforms the original audio files into partially de-noised audio files, maintaining their length.<br />
 *nr: A ⟶ D1, audioOriginal ↦ nr(audioOriginal) = audioPartiallyDenoised*<br />
 * Band pass-filter: let D2 be the space of de-noised audio files. The second step transforms the
-partially de-noised audio files into de-noised audio files, maintaining their length.
+partially de-noised audio files into de-noised audio files, maintaining their length..<br/>
 *bf : D1 ⟶ D2, audioPartially Denoised ↦ nr(audioPartiallyDenoised) = audioDenoised* <br />
 
 The de-noising algorithm can be understood as the composition of the above functions:<br />
