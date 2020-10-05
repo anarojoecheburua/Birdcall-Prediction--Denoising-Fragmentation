@@ -39,8 +39,10 @@ The final algorithm applies the fragmentation to the de-noised data, i.e, I am c
 
 ## Full description of the problem and datasets
 
+The full description of the problem and both train and test datasets can be found here <a href="https://www.kaggle.com/c/birdsong-recognition">here.</a>
+
 ## Requirements.txt
 
 This contains the library dependencies for the python code.  You will need to install these with
-# `pip install -r requirements.txt` 
+ `pip install -r requirements.txt` 
 before you can run this.
